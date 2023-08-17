@@ -1,0 +1,28 @@
+conda envs
+----------
+snakemake:
+snakemake
+gapp:
+fastqc
+multiqc:
+multiqc
+samtools:
+bwa v0.7.17
+samtools v1.17 (conda install samtools=1.17)
+picard:
+picard-2.18.29
+mosdepth:
+mosdepth v0.3.3
+jdk-17:
+openjdk v17.0.5
+bcftools:
+bcftools v1.9
+sratools:
+sra-tools v3.0.5
+seqkit:
+seqkit v2.5.1
+
+binaries
+--------
+GATK:
+gatk-4.4.0.0 (run with jdk-17)
