@@ -24,6 +24,7 @@ conda deactivate
 
 ### Outputs
 
+conda activate mbio
 cd output_${SAMPLE}
 for zip in *.zip
   do
@@ -39,7 +40,7 @@ cp ./multiqc_data/multiqc_fastqc.txt ../01_fastqc/multiqc_fastqc_${SAMPLE}.txt
 python ../01_fastqc_02_combine.py ${SAMPLE} ../01_fastqc
 cp multiqc_fastqc_combine.out ../01_fastqc/multiqc_fastqc_combine_${SAMPLE}.out
 cd ..
-
+conda deactivate
 rm -r output_${SAMPLE}
 
 ### Trimming
@@ -68,7 +69,7 @@ conda activate multiqc
 multiqc -f -p -o output2_${SAMPLE} ./output2_${SAMPLE}
 conda deactivate
 
-
+conda activate mbio
 cd output2_${SAMPLE}
 for zip in *.zip
   do
@@ -84,7 +85,7 @@ cp ./multiqc_data/multiqc_fastqc.txt ../03_fastqc/multiqc_fastqc_${SAMPLE}.txt
 python ../01_fastqc_02_combine.py ${SAMPLE} ../03_fastqc
 cp multiqc_fastqc_combine.out ../03_fastqc/multiqc_fastqc_combine_${SAMPLE}.out
 cd ..
-
+conda deactivate
 rm -r output2_${SAMPLE}
 
 
