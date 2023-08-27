@@ -1,28 +1,33 @@
 conda envs
 ----------
-snakemake:
-snakemake
-gapp:
-fastqc
-multiqc:
-multiqc
-samtools:
-bwa v0.7.17
-samtools v1.17 (conda install samtools=1.17)
-picard:
-picard-2.18.29
-mosdepth:
-mosdepth v0.3.3
-jdk-17:
-openjdk v17.0.5
-bcftools:
-bcftools v1.9
-sratools:
-sra-tools v3.0.5
-seqkit:
-seqkit v2.5.1
+mbio
+conda install pandas numpy matplotlib seaborn scikit-learn altair
 
-binaries
---------
-GATK:
-gatk-4.4.0.0 (run with jdk-17)
+sratools [v3.0.6]
+conda install -c bioconda sra-tools
+
+seqkit [v2.5.1]
+conda install -c bioconda seqkit
+
+fastqc [v0.12.1]
+conda install -c bioconda fastqc
+
+multiqc [v1.15]
+conda install -c bioconda multiqc
+
+trimmomatic [v0.39]
+conda install -c bioconda trimmomatic
+
+samtools [samtools v1.17; bwa-mem2 v2.2.1]
+conda install samtools=1.17
+conda install -c bioconda bwa-mem2
+
+picard [v3.0.0]
+conda install -c bioconda picard
+
+mosdepth [v0.3.4]
+conda install -c bioconda mosdepth
+
+bcftools [v1.17]
+conda install -c bioconda bcftools
+
