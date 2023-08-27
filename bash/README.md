@@ -26,7 +26,6 @@ The script:
 - checks read depth again, including across chromosomes/contigs
 - runs bcftools to call variants in diploid state (useful for checking ploidy)
 
-```
 
 To run the runner script (run.sh) modify first config information in the *00_06_get_config.py* file. At least give the path to reference file.  
 The script *run_make_commands.sh* with generate single-line commands for all SRA in the list.  
