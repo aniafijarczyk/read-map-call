@@ -3,7 +3,7 @@ General workflow for downloading, processing and mapping reads.
 
 
 
-General steps of the workflow:
+Steps of the workflow:
 
 - downloads reads from SRA given SRR ID
 - gzips fastq if needed
@@ -15,10 +15,9 @@ General steps of the workflow:
 - trimms reads
 - checks quality again
 - maps reads to given fasta reference
-- sorts and realigned the reads
+- sorts and realigns the reads
 - checks mean read depth
 - marks duplicates
 - checks read depth again, including across chromosomes/contigs
 - runs bcftools to call variants in diploid state (useful for checking ploidy)
-
 

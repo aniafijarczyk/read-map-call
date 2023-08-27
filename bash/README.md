@@ -20,7 +20,7 @@ The script:
 - trimms reads
 - checks quality again
 - maps reads to given fasta reference
-- sorts and realigned the reads
+- sorts and realigns the reads
 - checks mean read depth
 - marks duplicates
 - checks read depth again, including across chromosomes/contigs
