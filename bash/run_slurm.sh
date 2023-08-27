@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -D /project/download_and_map
-#SBATCH -J xaa
-#SBATCH -o xaa-%j.out
+#SBATCH -J test
+#SBATCH -o test-%j.out
 #SBATCH -c 2
 #SBATCH -p medium
 #SBATCH --time=7-00:00:00
@@ -9,4 +9,4 @@
 
 
 
-source xaa
+source run.sh SRR392813 CALB0456
