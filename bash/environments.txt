@@ -6,6 +6,10 @@ conda install pandas numpy matplotlib seaborn scikit-learn altair
 
 sratools [v3.0.6]
 conda install -c bioconda sra-tools
+To configure location of dumping *.sra files, go to sra-tools bin, run ./vdb-config -i,  
+go to the second page "CACHE", and modify "public user-repository"  
+from "/home/user/ncbi/sra/" to "/whatever/directory/ncbi/sra".  
+Detailes in [here](https://github.com/ncbi/sra-tools/wiki/05.-Toolkit-Configuration)
 
 seqkit [v2.5.1]
 conda install -c bioconda seqkit
