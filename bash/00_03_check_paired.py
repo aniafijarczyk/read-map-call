@@ -2,7 +2,7 @@ import glob
 import re
 import sys
 
-sample = "CALB0456"
+#sample = "CALB0456"
 #srr = "SRR392813"
 
 sample = sys.argv[1]

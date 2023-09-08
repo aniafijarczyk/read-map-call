@@ -13,7 +13,7 @@ SRA = sys.argv[2]
 FASTQ_PATH = sys.argv[3]
 
 # Global variables
-PATH_REFERENCE = "/project/chlandry/projects/MutationAccum/Anna/2023_08_gapp_glabrata/DATA/C_glabrata_CBS138_version_s05-m03-r02_chromosomes.fasta"
+PATH_REFERENCE = "/home/DATA/Candida_glabrata_reference/C_glabrata_CBS138_version_s05-m03-r02_chromosomes.fasta"
 FASTQ_THREADS = 2
 TRIMMOMATIC_THREADS = 2
 FASTQ_PHRED = 33
@@ -99,7 +99,7 @@ SAMTOOLS_THREADS=""" + str(SAMTOOLS_THREADS) + """
 REF=""" + PATH_REFERENCE + """
 """
 
-            wh = open('config_' + sample_id + '_PE.txt', 'w')
+            wh = open('config_' + sample_id + '.txt', 'w')
             wh.write(config_PE)
             wh.flush()
             wh.close()
@@ -132,7 +132,7 @@ SAMTOOLS_THREADS=""" + str(SAMTOOLS_THREADS) + """
 REF=""" + PATH_REFERENCE + """
 """
 
-            wh = open('config_' + sample_id + '_SE.txt', 'w')
+            wh = open('config_' + sample_id + '.txt', 'w')
             wh.write(config_SE)
             wh.flush()
             wh.close()
