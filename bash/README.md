@@ -27,8 +27,8 @@ The script:
 - runs bcftools to call variants in diploid state (useful for checking ploidy)
 
 
-The runner script *run.sh* launches two scripts: *run_download.sh* which downloads fastq from ncbi,  
-and *run_download.sh* which maps the reads to the reference.  
-To run run.sh first modify config information in the *00_06_get_config.py* file. At least give the path to the reference file.  
-The script *run_make_commands.sh* with generate single-line commands for all SRA in the list.  
-The script *run_slurm.sh* shows an example how to launch it using slurm.  
+The runner script **run.sh** launches two scripts: **run_download.sh** which downloads fastq from ncbi,  
+and **run_download.sh** which maps the reads to the reference.  
+To run run.sh first modify config information in the **00_06_get_config.py** file. At least give the path to the reference file.  
+The script **run_make_commands.sh** will generate single-line commands for all SRA in the list.  
+The script **run_slurm.sh** shows an example how to launch it using slurm.  
