@@ -1,9 +1,10 @@
 ### Mapping step
 
 ```mermaid
-init: {'theme':'base',
-          'htmlLabels': false,
-          'themeVariables': {
+{
+'theme':'base',
+'htmlLabels': false,
+'themeVariables': {
                   'primaryColor': '#B6D0E2',
                   'primaryTextColor': '#000',
                   'primaryBorderColor': '#B6D0E2',
@@ -12,7 +13,8 @@ init: {'theme':'base',
                   'clusterBkg': '#FFF',
                   'clusterBorder' : '#FFF',
                   'titleColor' : '#FFF'},
-           'flowchart': {"htmlLabels": false}}
+'flowchart': {"htmlLabels": false}
+}
 
 graph TB;
 
