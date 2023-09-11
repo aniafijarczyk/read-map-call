@@ -45,8 +45,8 @@ graph TB;
         S3 --- S4["variant effects"]:::Process;
         S4 --- S5["annotation"]:::Process;
         S5 --> S6(["filtered variants"]):::Output;
-        GFF(["Gff"]):::Input --> S4;
-        GFF(["Gff"]):::Input --> S5;
+        GFF(["Gff"]):::Input ----> S4;
+        GFF(["Gff"]):::Input -----> S5;
     end
     
     subgraph main
@@ -58,7 +58,7 @@ graph TB;
         M -.-> SI;
         M -.-> CN;
         H3 -.-> R;
-        H3 -.-> CN2;
+        H3 -.-> CN;
     end
     
     classDef subg fill:#fff,color:#fff,stroke:#A7C7E7
