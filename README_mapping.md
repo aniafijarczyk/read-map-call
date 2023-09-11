@@ -2,7 +2,7 @@
 
 ```mermaid
 
-%%{init: {"theme": "base",
+%%{init: {"theme": "dark",
   "htmlLabels": false,
   "themeVariables":{"primaryColor": "#B6D0E2",
   "primaryTextColor": "#000",
