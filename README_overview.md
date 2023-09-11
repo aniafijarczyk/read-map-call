@@ -10,9 +10,9 @@ graph TB;
 
     subgraph download
         direction TB;
-        A([SRA IDs list]):::Input --- A2["download\nfasterq-dump"]:::Process;
+        A([SRA IDs list]):::Input --> A2["download\nfasterq-dump"]:::Process;
         A2 --> B(["raw reads"]):::Output;
-        B --- D["stats\nseqkit"];
+        B --> D["stats\nseqkit"];
         D:::Process --- E(["encoding\nread length\npairing"]);
         E:::Output --> G(["config files"]):::Output;
         B ----> B2(["raw reads"]):::Output;
@@ -31,12 +31,15 @@ graph TB;
         H3(["reference"]):::Input --> J[trimming]:::Process;
         J --- K[mapping]:::Process;
         K --- L[marking duplicates]:::Process;
-        L --> M(["deduplicated reads"]):::Output;
+        L --> M(["mapped reads"]):::Output;
     end
 
     subgraph snps
         direction TB;
-        SI([bam files]):::Input --- S1["variant calling"]:::Process;
+		CN["generate config"]:::Process --> SI([bam files]):::Input;
+		CN --> CN2(["config file"])::Output;
+        SI --> S1["variant calling"]:::Process;
+		CN2 --> S1;
         S1 --- S2["overview"]:::Process;
         S2 --- S3["filtering"]:::Process;
         S3 --- S4["variant effects"]:::Process;
@@ -51,9 +54,14 @@ graph TB;
         B2 -.-> H2;
         C2 -.-> H2;
         M -.-> SI;
+		H3 -.-> S1;
+		
     end
     
-    classDef down fill:#fff,color:#fff,stroke:#A7C7E7
-    class download,genconf,mapping,main,snps down
+    classDef subg fill:#fff,color:#fff,stroke:#A7C7E7
+    class download,genconf,mapping,snps subg
+	
+	classDef maing fill:#fff,color:#fff,stroke:#fff
+    class maing down
 
 ```
