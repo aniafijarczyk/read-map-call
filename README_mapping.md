@@ -12,7 +12,7 @@ graph TB;
 
     subgraph main   
         A([config file]):::Input --> B(["`raw reads\n(fastq)`"]);
-        B:::Input === D["`trimming\n*trimmomatic*`"];
+        B:::Input === D["trimming\n*trimmomatic*"];
         D:::Process ==> E(["`**trimmed reads\n(fastq)**`"]);
         E:::Output === G["`mapping\n*bwa2-mem*`"];
         G:::Process === G2["`realignment\n*samtools calmd*`"];
