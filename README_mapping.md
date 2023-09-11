@@ -14,6 +14,7 @@
   "titleColor" : "#FFF"}}%%
 
 graph TB;
+    %%{config: { 'fontFamily': 'Menlo', 'fontSize': 18, 'fontWeight': 400} }%%
 
     classDef Output fill:#6082B6,stroke:#6082B6,stroke-width:2px,color:#fff;
     classDef Reports fill:#B6D0E2,stroke:#B6D0E2,stroke-width:2px,color:#fff;
