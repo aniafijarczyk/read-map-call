@@ -2,6 +2,8 @@
 
 ```mermaid
 
+%%{init: {"htmlLabels": false }}%%
+
 graph TB;
 
     classDef Output fill:#6082B6,stroke:#6082B6,stroke-width:2px,color:#fff;
