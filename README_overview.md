@@ -26,9 +26,9 @@ graph TB;
 
     subgraph mapping
         direction TB;
-        H(["config files"]):::Input --> J[trimming]:::Process;
-        H2(["raw reads"]):::Input --> J[trimming]:::Process;
-        H3(["reference"]):::Input --> J[trimming]:::Process;
+        H(["config files"]):::Output --> J[trimming]:::Process;
+        H2(["raw reads"]):::Output --> J[trimming]:::Process;
+        H3(["reference"]):::Output --> J[trimming]:::Process;
         J --- K[mapping]:::Process;
         K --- L[marking duplicates]:::Process;
         L --> M(["mapped reads"]):::Output;
@@ -37,13 +37,16 @@ graph TB;
     subgraph snps
         direction TB;
         CN["generate config"]:::Process --> CN2(["config file"]):::Output;
-        SI --> S1["variant calling"]:::Process;
+        SI(["mapped reads"]):::Output --> S1["variant calling"]:::Process;
+        R(["reference"]):::Output --> S1["variant calling"]:::Process;
         CN2 --> S1;
         S1 --- S2["overview"]:::Process;
         S2 --- S3["filtering"]:::Process;
         S3 --- S4["variant effects"]:::Process;
         S4 --- S5["annotation"]:::Process;
         S5 --> S6(["filtered variants"]):::Output;
+        GFF(["Gff"]):::Input --> S4;
+        GFF(["Gff"]):::Input --> S5;
     end
     
     subgraph main
@@ -54,7 +57,8 @@ graph TB;
         C2 -.-> H2;
         M -.-> SI;
         M -.-> CN;
-        H3 -.-> S1;
+        H3 -.-> R;
+        H3 -.-> CN2;
     end
     
     classDef subg fill:#fff,color:#fff,stroke:#A7C7E7
