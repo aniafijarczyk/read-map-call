@@ -36,10 +36,9 @@ graph TB;
 
     subgraph snps
         direction TB;
-		CN["generate config"]:::Process --> SI([bam files]):::Input;
-		CN --> CN2(["config file"])::Output;
+        CN["generate config"]:::Process --> CN2(["config file"]):::Output;
         SI --> S1["variant calling"]:::Process;
-		CN2 --> S1;
+        CN2 --> S1;
         S1 --- S2["overview"]:::Process;
         S2 --- S3["filtering"]:::Process;
         S3 --- S4["variant effects"]:::Process;
@@ -54,13 +53,14 @@ graph TB;
         B2 -.-> H2;
         C2 -.-> H2;
         M -.-> SI;
-		H3 -.-> S1;
+        M -.-> CN;
+        H3 -.-> S1;
     end
     
     classDef subg fill:#fff,color:#fff,stroke:#A7C7E7
     class download,genconf,mapping,snps subg
 	
-	classDef maing fill:#fff,color:#fff,stroke:#fff
+    classDef maing fill:#fff,color:#fff,stroke:#fff
     class main maing
 
 ```
