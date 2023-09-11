@@ -2,19 +2,10 @@
 
 ```mermaid
 
-%%{init: {"theme": "dark",
-  "htmlLabels": false,
-  "themeVariables":{"primaryColor": "#B6D0E2",
-  "primaryTextColor": "#000",
-  "primaryBorderColor": "#B6D0E2",
-  "lineColor": "#000",
-  "secondaryColor": "#FFF",
-  "clusterBkg": "#FFF",
-  "clusterBorder": "#FFF",
-  "titleColor" : "#FFF"}}%%
+%%{init: {"theme": "base",
+  "htmlLabels": false }}%%
 
 graph TB;
-    %%{config: { 'fontFamily': 'Menlo', 'fontSize': 18, 'fontWeight': 400} }%%
 
     classDef Output fill:#6082B6,stroke:#6082B6,stroke-width:2px,color:#fff;
     classDef Reports fill:#B6D0E2,stroke:#B6D0E2,stroke-width:2px,color:#fff;
@@ -22,7 +13,7 @@ graph TB;
     classDef Process fill:#96DED1,stroke:#96DED1,stroke-width:2px;
     classDef Subgr fill:#FFFFFF,stroke:#FFFFFF;
 
-    subgraph main   
+    subgraph mapping
         A([config file]):::Input --> B(["`raw reads\n(fastq)`"]);
         B:::Input === D["trimming\n*trimmomatic*"];
         D:::Process ==> E(["`**trimmed reads\n(fastq)**`"]);
@@ -50,8 +41,8 @@ graph TB;
         P["`read depth check\n*mosdepth*`"]:::Process -.-> R([read depth report]):::Reports;
     end
     
-    classDef subg fill:#FFF
-    class main,fastqc1,fastqc2,depth1,depth2 subg
+    classDef subg fill:#fff,color:#fff
+    class mapping,fastqc1,fastqc2,depth1,depth2 subg
 
 
     B -.- C
