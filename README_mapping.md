@@ -49,6 +49,10 @@ graph TB;
     subgraph depth2
         P["`read depth check\n*mosdepth*`"]:::Process -.-> R([read depth report]):::Reports;
     end
+    
+    classDef subg fill:#FFF
+    class main,fastqc1,fastqc2,depth1,depth2 subg
+
 
     B -.- C
     E -.- H
