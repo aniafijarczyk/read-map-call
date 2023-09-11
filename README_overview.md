@@ -55,13 +55,12 @@ graph TB;
         C2 -.-> H2;
         M -.-> SI;
 		H3 -.-> S1;
-		
     end
     
     classDef subg fill:#fff,color:#fff,stroke:#A7C7E7
     class download,genconf,mapping,snps subg
 	
 	classDef maing fill:#fff,color:#fff,stroke:#fff
-    class maing down
+    class main maing
 
 ```
