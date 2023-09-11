@@ -2,7 +2,16 @@
 
 ```mermaid
 
-%%{init: {"htmlLabels": false }}%%
+%%{init: {"theme": "base",
+  "htmlLabels": false,
+  "themeVariables":{"primaryColor": "#B6D0E2",
+  "primaryTextColor": "#000",
+  "primaryBorderColor": "#B6D0E2",
+  "lineColor": "#000",
+  "secondaryColor": "#FFF",
+  "clusterBkg": "#FFF",
+  "clusterBorder": "#FFF",
+  "titleColor" : "#FFF"}}%%
 
 graph TB;
 
