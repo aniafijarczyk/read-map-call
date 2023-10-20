@@ -23,7 +23,7 @@ PE_FLOWCELL_NUMBER = SRA
 PLATFORM = "ILLUMINA"
 BWA_THREADS = 2
 SAMTOOLS_THREADS = 2
-
+PLOIDY = 1
 
 
 def pairingFile():
@@ -97,6 +97,7 @@ PLATFORM=""" + PLATFORM + """
 BWA_THREADS=""" + str(BWA_THREADS) + """
 SAMTOOLS_THREADS=""" + str(SAMTOOLS_THREADS) + """
 REF=""" + PATH_REFERENCE + """
+PLOIDY=""" + str(PLOIDY) + """
 """
 
             wh = open('config_' + sample_id + '.txt', 'w')
@@ -130,6 +131,7 @@ PLATFORM=""" + PLATFORM + """
 BWA_THREADS=""" + str(BWA_THREADS) + """
 SAMTOOLS_THREADS=""" + str(SAMTOOLS_THREADS) + """
 REF=""" + PATH_REFERENCE + """
+PLOIDY=""" + str(PLOIDY) + """
 """
 
             wh = open('config_' + sample_id + '.txt', 'w')
