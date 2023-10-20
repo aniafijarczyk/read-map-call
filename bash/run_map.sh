@@ -105,12 +105,7 @@ cd 07_depth
 sh ../07_02_get_depth.sh ${SAMPLE}
 cd ..
 
-### Bcftools for diploids
-echo "BCFTOOLS"
-mkdir -p 08_bcftools
-source activate bcftools
-sh 08_01_bcftools.sh ${CONFIG}
-conda deactivate
+
 
 ### Removing big files
 rm ./02_trimmed/${SAMPLE}_R?P.fastq.gz

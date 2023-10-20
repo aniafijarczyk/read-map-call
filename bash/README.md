@@ -16,6 +16,7 @@ The script:
 - checks fastq phred encoding
 - checks the mean read length
 - writes config file for each paired/single read file (required for the next step)
+
 - checks quality of reads with fastqc and multiqc
 - trimms reads
 - checks quality again
@@ -24,11 +25,17 @@ The script:
 - checks mean read depth
 - marks duplicates
 - checks read depth again, including across chromosomes/contigs
-- runs bcftools to call variants in diploid state (useful for checking ploidy)
+
+- runs bcftools to call variants in all positions
 
 
-The runner script **run.sh** launches two scripts: **run_download.sh** which downloads fastq from ncbi,  
-and **run_download.sh** which maps the reads to the reference.  
+The runner script **run.sh** launches two scripts:  
+- **run_download.sh** which downloads fastq from ncbi,  
+- **run_download.sh** which maps the reads to the reference, and  
+- **run_call.sh** which calls variants/genotypes.  
+
 To run run.sh first modify config information in the **00_06_get_config.py** file. At least give the path to the reference file.  
+
 The script **run_make_commands.sh** will generate single-line commands for all SRA in the list.  
+
 The script **run_slurm.sh** shows an example how to launch it using slurm.  
