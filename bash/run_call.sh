@@ -5,7 +5,7 @@ SRA=${1}
 SAMP=${2}
 
 ### Read config
-CONFIG=`pwd`/config_${SAMP}_${SRA}_PE.txt
+CONFIG=`pwd`/config_${SAMP}_${SRA}.txt
 . ${CONFIG}
 
 
