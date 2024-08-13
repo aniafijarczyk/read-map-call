@@ -31,7 +31,7 @@ The script:
 
 The runner script **run.sh** launches two scripts:  
 - **run_download.sh** which downloads fastq from ncbi,  
-- **run_download.sh** which maps the reads to the reference, and  
+- **run_map.sh** which maps the reads to the reference, and  
 - **run_call.sh** which calls variants/genotypes.  
 
 To run run.sh first modify config information in the **00_06_get_config.py** file. At least give the path to the reference file.  
