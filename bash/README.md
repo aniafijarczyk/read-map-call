@@ -34,7 +34,7 @@ The runner script **run.sh** launches two scripts:
 - **run_map.sh** which maps the reads to the reference, and  
 - **run_call.sh** which calls variants/genotypes.  
 
-To run run.sh first modify config information in the **00_06_get_config.py** file. At least give the path to the reference file.  
+To run run.sh first modify config information in the **00_06_get_configs.py** file. At least give the path to the reference file.  
 
 The script **run_make_commands.sh** will generate single-line commands for all SRA in the list.  
 
