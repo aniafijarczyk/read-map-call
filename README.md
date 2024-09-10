@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13741341.svg)](https://doi.org/10.5281/zenodo.13741341)
+
 # read-map-call
 General workflow for downloading, processing and mapping reads.
 
